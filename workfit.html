@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash' Fitness</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /*CSS reset*/
+    body {
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('bg4.jpg');
+        font-family: 'Baloo Bhaina 2', cursive;
+
+    }
+
+    .left {
+        display: inline-block;
+        position: absolute;
+        color: orange;
+        left: 60px;
+        top: 20px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 25px;
+        /*border: 2px solid yellow;*/
+    }
+
+    .left img {
+        width: 100px;
+        height: 70px;
+    }
+
+    .mid {
+        display: block;
+        width: 60%;
+        text-align: center;
+        margin: 20px auto;
+        /*border: 2px solid yellow;*/
+    }
+
+    .right {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        display: inline-block;
+        /*padding: 2px;*/
+        /*border: 2px solid yellow;*/
+    }
+
+    .navbar {
+        display: inline-block;
+        padding: 0px;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 30px;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: orange;
+    }
+
+    .btn {
+        font-family: 'Baloo Bhaina 2', cursive;
+        font-size: larger;
+        margin: 10px 3px;
+        background-color: transparent;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid white;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: orange;
+        border: 2px solid black;
+        font-weight: bolder;
+        color: black;
+    }
+
+    .container {
+        color: orange;
+        /*text-align: center;*/
+        font-size: 17px;
+        display: block;
+        margin: 20px 60px;
+        padding: 20px 20px;
+        /*margin: 20px;*/
+        width: 40%;
+        border-radius: 20px;
+        /*border: 2px solid orange;*/
+    }
+
+    .container button {
+        width: 404px;
+    }
+
+    .form-group input {
+        padding: 5px 10px;
+        margin: 3px;
+        display: block;
+        width: 380px;
+        font-family: 'Baloo Bhaina 2', cursive;
+        border-radius: 10px;
+        /*text-align: center;*/
+        font-size: larger;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!--left for logo-->
+        <div class="left">
+            <img src="logo3.png" alt="">
+            <div>WORKFIT</div>
+        </div>
+        <!--mid for navbar-->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <!--right for search button-->
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the Best Gym in the City</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your name">
+                <input type="text" name="" placeholder="Age">
+                <input type="text" name="" placeholder="Gender">
+                <input type="text" name="" placeholder="Ph no.">
+                <input type="text" name="" placeholder="Email">
+            </div>
+            <button class="btn">Join</button>
+        </form>
+    </div>
+</body>
+
+</html>
