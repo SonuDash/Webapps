@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intertravel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /*CSS Variables*/
+    :root {
+        --navbar-height: 59px
+    }
+
+
+
+    /*navigation bar*/
+    #navbar {
+        top: 0px;
+        font-family: 'Josefin Sans', sans-serif;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        align-items: center;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+
+    }
+
+    /*naviation bar: logo and image*/
+    #logo {
+        margin: 2px 5px;
+    }
+
+    #logo img {
+        filter: invert(100%);
+        height: 70px;
+        padding-left: 30px;
+        margin: 25px 25px;
+    }
+
+    /*navigation bar: list styling*/
+    #navbar ul {
+        display: flex;
+
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 20px;
+        color: black;
+    }
+
+    #navbar ul li a {
+        /*display: block;*/
+        color: white;
+        padding: 2px 10px;
+        margin: 2px 5px;
+        text-decoration: none;
+    }
+
+    #navbar ul li a:hover {
+        text-decoration: underline;
+    }
+
+    #navbar ul li a:active {
+        font-weight: bolder;
+        text-decoration: underline;
+    }
+
+    /*home section*/
+    #home {
+        display: flex;
+        height: 485px;
+        flex-direction: column;
+        padding: 3px 200px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #home::before {
+        content: "";
+        position: absolute;
+        background: url('bg6.jpg') no-repeat center center/cover;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 620px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.95;
+    }
+
+
+    #home h1 {
+        color: white;
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    #home p {
+        color: white;
+        font-weight: bolder;
+        font-family: 'Orbitron', sans-serif;
+        padding: 5px;
+        margin: 5px;
+        font-size: 20px;
+    }
+
+
+    /*utility classes*/
+    h1 {
+        font-size: 3rem;
+        padding: 12px;
+    }
+
+    .btn {
+        font-size: 2rem;
+        font-family: 'Orbitron', sans-serif;
+        color: white;
+        display: flex;
+        padding: 10px 10px;
+        margin: 40px 10px;
+        background: transparent;
+        border: 5px solid white;
+        border-radius: 5px;
+    }
+
+    .btn:hover {
+        cursor: pointer;
+        font-weight: bolder;
+        background-color: white;
+        color: black;
+    }
+
+    /*destinations section*/
+    .destinations-container {
+       
+        text-align: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        color: white;
+        /*font-family: 'Josefin Sans', sans-serif;*/
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 600px;
+    }
+
+    .h-primary-center{
+        padding-top: 40px;
+    }
+
+    #destination {
+        /*background-color: black;*/
+        margin: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    #destination .box {
+        color: black;
+        font-family: 'Orbitron', sans-serif;
+        border: 5px solid black;
+        background-color: rgb(189, 189, 241);
+        border-radius: 20px;
+        text-align: center;
+        padding: 20px 24px;
+        margin: 5px 10px;
+        height: 370px;
+        width: 350px;
+    }
+
+    #destination .box img {
+        height: 250px;
+    }
+
+    /*service provider section*/
+
+    .provider-section {
+        position: relative;
+        text-align: center;
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 300px;
+
+    }
+
+    .h-primary{
+        padding-top: 40px;
+    }
+
+    #providers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .provider-section img {
+        height: 100px;
+        padding: 10px 5px;
+        margin: 10px 5px;
+    }
+
+    /*Contact us section*/
+    .contact {
+        position: relative;
+        height: 700px;
+        color: white;
+    }
+
+    .contact::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.9;
+        background: url('bg3.jpg') no-repeat center center/cover;
+    }
+
+    h1 {
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+    }
+
+    #contact-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+        font-size: larger;
+        color: white;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1.1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        border-radius: 10px;
+    }
+
+    #contact-box form{
+        width: 40%;
+    }
+
+    #contact-box label{
+        font-size: 2rem;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    /*footer*/
+    footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px 5px;
+    }
+
+    .center {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <a href="#">
+                <img src="logo2.png" alt="travelverse.com">
+            </a>
+        </div>
+        <ul class="navigation">
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Destinations</a></li>
+            <li class="item"><a href="#">Travel Regulations</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <p>WELCOME TO</p>
+        <h1 class="h-primry">TRAVELVERSE</h1>
+        <p>TRAVEL THE UNIVERSE WITH TRAVELVERSE</p>
+        <button class="btn">Book a Ride</button>
+    </section>
+
+    <section class="destinations-container">
+        <h1 class="h-primary-center">DESTINATIONS</h1>
+        <div id="destination">
+            <div class="box">
+                <img src="moon.png" alt="travelverse.com">
+                <h1>MOON</h1>
+                <p>Our natural SAT</p>
+            </div>
+            <div class="box">
+                <img src="mars.png" alt="travelverse.com">
+                <h1>MARS</h1>
+                <p>Our friendly neighbourhood RED PLANET
+                </p>
+            </div>
+            <div class="box">
+                <img src="venus.png" alt="travelverse.com">
+                <h1>VENUS</h1>
+                <p>Our controversial TWIN</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="provider-section">
+        <h1 class="h-primary">SERVICE PROVIDERS</h1>
+        <div id="poviders">
+            <a href="https://www.spacex.com/">
+                <img src="spacex.png" alt="service providers">
+            </a>
+            <a href="https://www.blueorigin.com/">
+                <img src="blue-origin.png" alt="service providers">
+            </a>
+            <a href="https://www.virgingalactic.com/">
+                <img src="virgin.png" alt="service providers">
+            </a>
+            <a href="https://www.boeing.com/">
+                <img src="boeing.png" alt="service providers">
+            </a>
+        </div>
+    </section>
+    <section class="contact">
+        <h1 class="h-primary-center">CONTACT US</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                    <label for="name">Email: </label>
+                    <input type="text" name="email" id="email" placeholder="Enter your Email Id">
+                    <label for="number">Phone no.: </label>
+                    <input type="phone" name="number" id="phone no" placeholder="Enter your Phone No.">
+                    <label for="name">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.travelverse.com. All Rights Reserved!
+        </div>
+    </footer>
+
+</body>
+
+</html>
